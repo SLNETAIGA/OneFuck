@@ -34,7 +34,7 @@
 				$cell = ord(fgetc(STDIN));
 				break;
 			case "[" :
-				if(!$chain[$cell]) {
+				if(!$cell) {
 					$brackets = 1;
 					while($brackets) {
 						$i++;
@@ -47,7 +47,7 @@
 				}
 				break;
 			case "]" :
-				if($chain[$cell]) {
+				if($cell) {
 					$brackets = 1;
 					while($brackets) {
 						$i--;
